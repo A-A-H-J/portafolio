@@ -1,0 +1,224 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --primary-color: #38bdf8;
+    --accent-color: #818cf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-description {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+.hero h1 span { color: var(--primary-color); }
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Skills */
+.experience {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.skill-category p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Projects Grid */
+.projects { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+.project-badge { color: var(--primary-color); font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+.project-links { margin-top: 1.5rem; display: flex; gap: 1rem; }
+.project-links a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; }
+
+/* Sección de Contacto */
+.contact {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    background: var(--card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+.contact-item .contact-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-item a,
+.contact-item p {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Arreglo para los botones del Hero */
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    color: #38bdf8;
+    text-decoration: underline;
+    font-weight: bold;
+}
