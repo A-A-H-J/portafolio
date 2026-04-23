@@ -1,6 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     const header = document.querySelector('.header');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    // Menú hamburguesa
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        const icon = navToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            const icon = navToggle.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+    });
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
